@@ -11,7 +11,7 @@ pipeline {
                     credentialsId: 'AWS_SECRET_ACCESS_KEY' 
                 ]]) {
                     sh '''
-                    echo "AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID"
+                    echo "AWS_ACCESS_KEY_ID: $vladDocker"
                     aws sts get-caller-identity
                     '''
                 }
@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/derrickSh43/autoScale' 
+                git branch: 'main', url: 'https://github.com/Meifumado13/autoScale.git' 
             }
         }
         stage('Initialize Terraform') {
