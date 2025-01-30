@@ -11,7 +11,7 @@ pipeline {
                     credentialsId: 'AWS_SECRET_ACCESS_KEY' 
                 ]]) {
                     sh '''
-                    echo "AWS_ACCESS_KEY_ID: $vladDocker"
+                    echo "AWS_ACCESS_KEY_ID: AKIATJHQEHR4XAKQOZSM"
                     aws sts get-caller-identity
                     '''
                 }
